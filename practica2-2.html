@@ -1,0 +1,46 @@
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="practica2-2.js"></script>
+</head>
+<body>
+    <div id="login">
+        <span id="error" style="background-color: red;"></span>
+        <div id="mail">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email">
+            </div>
+
+        <div id="pass">
+            <label for="pwd">Contrasenya:</label>
+            <input type="password" id="pwd" name="pwd">
+            </div>
+
+        <button onclick="formulari1()">Enviar formulari</button>
+    </div>
+
+    <div id="formulari">
+        <span id="error2" style="background-color: red;"></span>
+        <div id="nombre">
+            <label for="nom">Nom:</label>
+            <input type="text" id="nom" name="nom">
+        </div>
+
+        <div id="apellidos">
+            <label for="cognoms">Cognoms:</label>
+            <input type="text" id="cognoms" name="cognoms">
+        </div>
+
+        <div id="edad">
+            <label for="edat">Edat:</label>
+            <input type="number" id="edat" name="edat">
+        </div>
+        <button onclick="formulari2()">Enviar</button>
+    </div>
+
+    <div id="mostrardades">
+        <h1>Perfil</h1>
+
+    </div>
+</body>
+</html>
