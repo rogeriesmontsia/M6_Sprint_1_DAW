@@ -1,0 +1,22 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ajusta l'alçada al 100% de la vista */
+    margin: 0; /* Elimina els marges per defecte */
+}
+
+.container, 
+.formcont {
+    text-align: center;
+}
+/* Estil per a les caixes d'introduir text */
+input[type="text"], input[type="password"], input [type="email"] {
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+

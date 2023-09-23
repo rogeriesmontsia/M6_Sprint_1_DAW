@@ -1,25 +1,28 @@
 <html>
+
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="practica2-2.js"></script>
+    <link rel="stylesheet" href="estils.css">
 </head>
+
 <body>
-    <div id="login">
+    <div class="container" id="login">
         <span id="error" style="background-color: red;"></span>
         <div id="mail">
             <label for="email">E-mail:</label>
             <input type="email" id="email" name="email">
-            </div>
+        </div><span id="errormail" style="background-color: red;"></span>
 
         <div id="pass">
             <label for="pwd">Contrasenya:</label>
             <input type="password" id="pwd" name="pwd">
-            </div>
+        </div>
 
         <button onclick="formulari1()">Enviar formulari</button>
     </div>
 
-    <div id="formulari">
+    <div class="formcont" id="formulari">
         <span id="error2" style="background-color: red;"></span>
         <div id="nombre">
             <label for="nom">Nom:</label>
@@ -39,8 +42,28 @@
     </div>
 
     <div id="mostrardades">
-        <h1>Perfil</h1>
-
+        <div id="mostrarnom">
+            <label for="nom">Nom:</label>
+            <span></span>
+        </div>
+        <div id="mostrarcognom">
+            <label for="cognoms">Cognoms:</label>
+            <span></span>
+        </div>
+        <div id="mostraremail">
+            <label for="email">Email:</label>
+            <span></span>
+        </div>
+        <div id="mostraredat">
+            <label for="edat">Edat:</label>
+            <span></span>
+        </div>
+        <div id="mostrarpass">
+            <label for="pwd">Contrasenya:</label>
+            <span></span>
+        </div>
     </div>
+
 </body>
+
 </html>
