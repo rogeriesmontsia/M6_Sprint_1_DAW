@@ -1,0 +1,42 @@
+<html>
+
+<head>
+    <script>
+        const url = 'https://thronesapi.com/api/v2/Characters';
+        fetch(url)
+            .then(response => response.json())
+            .then(movies => {
+
+
+                //async function logMovies() {
+                // const response = await fetch("https://thronesapi.com/api/v2/Characters");
+                //const movies = await response.json();
+
+                console.log(movies[0]);
+                //Afegim a la key 0 de localStorage el JSON del primer personatge
+                localStorage.setItem("0", JSON.stringify(movies[0]));
+                // Obtenim tot l'objecte que hem desat a la key 0
+                const item0 = localStorage.getItem("0");
+                //Obtenim el valor del firstName
+                const nom = JSON.parse(item0).firstName;
+                //Accedim al div anomenat Nom
+                const NomInfoDiv = document.getElementById("Nom");
+                // Per a pintar el contingut obtingut del JSON
+                NomInfoDiv.innerHTML = `<p>Nom: ${nom}</p>`;
+
+                // Mostra la imatge
+                const img = JSON.parse(item0).imageUrl;
+
+                const imgDiv = document.getElementById("Imatge");
+                imgDiv.innerHTML = `<p>Imatge:</p><img src="${img}"/>`;
+
+            });
+    </script>
+</head>
+
+<body>
+    <div id="Nom"></div>
+    <div id="Imatge"></div>
+</body>
+
+</html>
