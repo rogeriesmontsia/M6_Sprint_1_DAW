@@ -7,46 +7,19 @@
 </head>
 
 <body>
-    <table id="example" class="display" style="width:100%">
+    <table id="taula" class="display" style="width:100%">
         <thead>
             <tr>
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Full Name</th>
                 <th>id</th>
-                <th>Image</th>
                 <th>ImageURL</th>
+                <th>Action</th>
             </tr>
         </thead>
     </table>
-    <script>
-        //afegir un boto a cada row para eliminar el contingut de localStorage
-        const url = 'https://thronesapi.com/api/v2/Characters';
-        fetch(url)
-            .then(response => response.json())
-            .then(movies => {
-
-                $(document).ready(function () {
-                    $('#example').DataTable({
-                        data: movies,
-                        columns: [
-                            { data: 'firstName' },
-                            { data: 'lastName' },
-                            { data: 'fullName' },
-                            { data: 'id' },
-                            { data: 'image' },
-                            {
-                                data: 'imageUrl',
-                                "render": function (data) {
-                                    return '<img src="' + data + '" style="width:200px; height:200px">';
-                                }
-                            }
-                        ]
-                    });
-                })
-            });
-
-    </script>
+    <script src="taula.js"></script>
 </body>
 
 </html>
