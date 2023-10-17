@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    // Verificar si hay datos en localStorage
+    // Verificar si hi ha dades al localStorage
     const moviesData = JSON.parse(localStorage.getItem('movies'));
     if (moviesData && moviesData.length > 0) {
         loadTable(moviesData);
@@ -47,16 +47,16 @@ function loadTable(movies) {
     $('#taula tbody').on('click', '.delete-button', function () {
         const id = $(this).data('id');
         localStorage.removeItem(id);
-        // Obtener los datos de localStorage
+        // Obtenir les dades de localStorage
         const localStorageData = JSON.parse(localStorage.getItem('movies')) || [];
 
-        // Filtrar para mantener solo los elementos que no coinciden con el ID que queremos eliminar
+        // Mantenim unicament els elements que no coincideixen amb el ID eliminat
         const updatedData = localStorageData.filter(item => item.id !== id);
 
-        // Guardar los datos actualizados en localStorage
+        // Guardem les dades actualitzades a localStorage
         localStorage.setItem('movies', JSON.stringify(updatedData));
 
-        // Eliminar la fila de la tabla
+        // Eliminar la fila de la taula
         table.row($(this).parents('tr')).remove().draw();
     });
 }
